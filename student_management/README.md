@@ -49,3 +49,19 @@ SQLite
 
 ## Project Status
 Core features and functional testing completed.
+
+
+## Screenshots
+
+### Home Page
+![Home Page](screenshots/Homepage.png)
+
+### Login Page
+![Login Page](screenshots/login.png)
+
+### Student List
+![Student List](screenshots/student_list.png)
+
+### Student Registration
+![Student Registration](screenshots/student_registration.png)
+
