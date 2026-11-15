@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="{% static 'students/style.css' %}">
+</head>
+<body>
+
+    <div class="register-container">
+
+        <h1>Student Registration Form</h1>
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+         {% endif %}  
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Enter name" pattern="[A-Za-z]+" title="please enter letters only" required>
+
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Enter email" required>
+
+            <label>Age</label>
+            <input type="number" name="age" placeholder="Enter age" min="1" max="100" required>
+
+            <label>Course</label>
+            <input type="text" name="course" placeholder="Enter course" pattern="[A-Za-z0-9 .+#-]+" title="please enter a valid course name" required>
+
+            <button type="submit">Register</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

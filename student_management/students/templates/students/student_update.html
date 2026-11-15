@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Student Details</title>
+    <link rel="stylesheet" href="{% static 'students/style.css' %}">
+</head>
+<body>
+
+    <div class="update-container">
+
+        <h1>Update Student Details</h1>
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <label>Name</label>
+            <input type="text" name="name" value="{{ students.name }}" pattern="[A-Za-z]+" title="please enter letters only" required>
+
+            <label>Email</label>
+            <input type="email" name="email" value="{{ students.email }}" required>
+
+            <label>Age</label>
+            <input type="number" name="age" value="{{ students.age }}" min="1" max="100" required>
+
+            <label>Course</label>
+            <input type="text" name="course" value="{{ students.course }}" pattern="[A-Za-z0-9 .+#-]+" title="please enter a valid course name" required>
+
+            <button type="submit">Update</button>
+        </form>
+
+    </div>
+
+</body>
+</html>

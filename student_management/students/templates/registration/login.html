@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link rel="stylesheet" href="{% static 'students/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="login-container">
+
+        <h1>User Login</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+            <p>
+                <label for="id_username">Username:</label>
+                <input type="text" name="username" id="id_username" required>
+            </p>
+            <label for="id_password">Password:</label>
+
+    <div class="password-field">
+        <input type="password" name="password" id="id_password" required>
+
+        <button type="button" id="togglePassword">
+        <i class="fa-solid fa-eye"></i>
+        </button>
+    </div>
+
+            <button type="submit">Login</button>
+            <p>
+                Don't have an account?
+                <a href="{% url 'user_register' %}">Create Account</a>
+            </p>
+        </form>
+
+    </div>
+
+<script>
+    const password = document.getElementById("id_password");
+    const togglePassword = document.getElementById("togglePassword");
+
+    togglePassword.addEventListener("click", function () {
+        if (password.type === "password") {
+            password.type = "text";
+            this.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
+        } else {
+            password.type = "password";
+            this.innerHTML = '<i class="fa-solid fa-eye"></i>';
+        }
+    });
+</script>    
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="{% static 'students/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="user-register-container">
+
+        <h1>Create Account</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+            <p>
+    <label for="{{ form.username.id_for_label }}">Username:</label>
+    {{ form.username }}
+    {{ form.username.errors }}
+</p>
+
+<p>
+    <label for="{{ form.password1.id_for_label }}">Password:</label>
+    <div class="password-field">
+        {{ form.password1 }}
+        <button type="button" onclick="togglePassword('id_password1', this)">
+            <i class="fa-solid fa-eye"></i>
+        </button>
+    </div>
+    {{ form.password1.errors }}
+</p>
+
+<p>
+    <label for="{{ form.password2.id_for_label }}">Confirm Password:</label>
+    <div class="password-field">
+        {{ form.password2 }}
+        <button type="button" onclick="togglePassword('id_password2', this)">
+            <i class="fa-solid fa-eye"></i>
+        </button>
+    </div>
+    {{ form.password2.errors }}
+</p>
+
+            <button type="submit">Register</button>
+        </form>
+
+    </div>
+
+<script>
+    function togglePassword(id, button) {
+        const password = document.getElementById(id);
+        const icon = button.querySelector("i");
+
+        if (password.type === "password") {
+            password.type = "text";
+            icon.classList.replace("fa-eye", "fa-eye-slash");
+        } else {
+            password.type = "password";
+            icon.classList.replace("fa-eye-slash", "fa-eye");
+        }
+    }
+</script>
+
+</body>
+</html>

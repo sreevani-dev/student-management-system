@@ -1,0 +1,640 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e2d9f3;
+    margin: 0;
+    padding: 0;
+}
+
+/* Home Dashboard */
+.home-container {
+    width: 80%;
+    max-width: 700px;
+    margin: 100px auto;
+    padding: 50px 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.home-container h1 {
+    color: #4b3b8f;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.home-container p {
+    color: #666;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.dashboard-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.dashboard-buttons button {
+    background-color: #6554c0;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dashboard-buttons button:hover {
+    background-color: #49378f;
+    transform: translateY(-3px);
+}
+
+/* Student List Page */
+.student-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.student-container h1,
+.student-container h2 {
+    color: #4b3b8f;
+}
+
+.student-container input,
+.student-container select {
+    padding: 10px;
+    margin: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.student-container form button {
+    background-color: #6554c0;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.student-container form button:hover {
+    background-color: #49378f;
+}
+
+.student-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.student-container th {
+    background-color: #6554c0;
+    color: white;
+    padding: 12px;
+}
+
+.student-container td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.student-container tbody tr:hover td {
+    background-color: #e2d9f3;
+    transition: 0.3s;
+}
+
+.student-container td a {
+    color: #27834a;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.student-container td a:hover {
+    text-decoration: underline;
+}
+
+/* Registration Page */
+.register-container,
+.update-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.register-container h1,
+.update-container h1 {
+    color: #4b3b8f;
+    text-align: center;
+    font-size: 25px;
+}
+
+.register-container label,
+.update-container label {
+    display: block;
+    margin-top: 15px;
+    color: #4b3b8f;
+}
+
+.register-container input,
+.update-container input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.register-container button,
+.update-container button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #6554c0;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.register-container button:hover,
+.update-container button:hover {
+    background-color: #49378f;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.pagination a {
+    color: #6554c0;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.pagination span {
+    color: #333;
+}
+
+.home-container .dashboard-card {
+    display: block;
+    width: 220px;
+    margin: 25px auto;
+    padding: 20px;
+    background-color: #f1edff;
+    border: 2px solid #6554c0;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+.home-container .dashboard-card h2 {
+    color: #4b3b8f;
+    font-size: 20px;
+    margin: 0 0 12px;
+}
+
+.home-container .dashboard-card p {
+    color: #6554c0;
+    font-size: 35px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Dashboard Cards Layout */
+.dashboard-cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin: 25px auto;
+}
+
+.home-container .dashboard-cards .dashboard-card {
+    width: 220px;
+    margin: 0;
+    padding: 20px;
+    background-color: #f1edff;
+    border: 2px solid #6554c0;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+/* Course Summary */
+.course-summary {
+    width: 90%;
+    max-width: 550px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.course-summary h2 {
+    color: #4b3b8f;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.course-summary table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.course-summary th {
+    background-color: #6554c0;
+    color: white;
+    padding: 12px;
+}
+
+.course-summary td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.course-summary tr:hover td {
+    background-color: #f1edff;
+}
+
+.top-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.home-button,
+.logout-button {
+    background-color: #6554c0;
+    color: white;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.home-button:hover,
+.logout-button:hover {
+    background-color: #49378f;
+}
+
+.home-container {
+    background-color: #f3efff !important;
+}
+.student-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.student-container th {
+    background-color: #6554c0;
+    color: white;
+    padding: 12px;
+}
+
+.student-container td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.student-container tr:nth-child(even) {
+    background-color: #f2efff;
+}
+
+.student-container td a {
+    background-color: #6554c0;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.student-container td button {
+    background-color: #e05252;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.student-container td a {
+    margin-right: 8px;
+}
+
+.student-container td form {
+    margin-left: 4px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.pagination a {
+    background-color: #6554c0;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.pagination a:hover {
+    background-color: #49378f;
+}
+
+.pagination span {
+    color: #333;
+    font-weight: bold;
+}
+
+.user-register-container {
+    width: 400px;
+    margin: 70px auto;
+    padding: 30px;
+    background-color: #f3efff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.user-register-container h1 {
+    text-align: center;
+    color: #6554c0;
+    margin-bottom: 25px;
+}
+
+.user-register-container label {
+    display: block;
+    margin-bottom: 6px;
+    color: #49378f;
+    font-weight: bold;
+}
+
+.user-register-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.user-register-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #6554c0;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.user-register-container button:hover {
+    background-color: #49378f;
+}
+
+/* Attractive Login Page */
+
+.login-container {
+    width: 380px;
+    margin: 80px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(75, 55, 140, 0.15);
+    text-align: center;
+}
+
+.login-container h1 {
+    color: #6554c0;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.login-container form p {
+    text-align: left;
+    margin-bottom: 18px;
+    color: #49378f;
+    font-weight: 500;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #d8d0f0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.login-container input:focus {
+    border-color: #6554c0;
+    box-shadow: 0 0 5px rgba(101, 84, 192, 0.3);
+}
+
+.login-container button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 12px;
+    background: #6554c0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background: #49378f;
+}
+
+.login-container a {
+    color: #6554c0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+.login-container form > p:last-child {
+    text-align: center;
+    margin-top: 22px;
+}
+
+.user-register-container {
+    width: 380px;
+    margin: 60px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(75, 55, 140, 0.15);
+    text-align: center;
+}
+
+.user-register-container h1 {
+    color: #6554c0;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.user-register-container form p {
+    text-align: left;
+    margin-bottom: 15px;
+    color: #49378f;
+}
+
+.user-register-container input {
+    width: 100%;
+    padding: 11px;
+    margin-top: 7px;
+    border: 1px solid #d8d0f0;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.user-register-container button {
+    width: 100%;
+    padding: 13px;
+    background: #6554c0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.user-register-container button:hover {
+    background: #49378f;
+}
+
+.password-field {
+    position: relative;
+    width: 100%;
+}
+
+.password-field input {
+    width: 100%;
+    padding-right: 45px;
+    box-sizing: border-box;
+}
+
+.password-field button {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    color: #6554c0;
+    border: none;
+    cursor: pointer;
+}
+
+.password-field button:hover {
+    background: transparent;
+}
+
+.login-container .password-field {
+    position: relative;
+    width: 100%;
+}
+
+.login-container .password-field input {
+    width: 100%;
+    padding-right: 45px;
+    box-sizing: border-box;
+}
+
+.login-container .password-field button {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    color: #6554c0;
+    border: none;
+    cursor: pointer;
+}
+
+.login-container .password-field button:hover {
+    background: transparent;
+}
+
+.login-container form > label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    color: #49378f;
+    font-weight: 500;
+}
+
+.user-register-container .password-field {
+    position: relative;
+    width: 100%;
+}
+
+.user-register-container .password-field input {
+    width: 100%;
+    padding-right: 45px;
+    box-sizing: border-box;
+}
+
+.user-register-container .password-field button {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    color: #6554c0;
+    border: none;
+    cursor: pointer;
+}
+
+.user-register-container .password-field button:hover {
+    background: transparent;
+}
