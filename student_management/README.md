@@ -1,8 +1,7 @@
 
 # Student Management System
 
-## Project Description
-Student Management System is a web-based application developed using Python and Django. It helps users manage student records easily.
+A web-based Student Management System developed using Python and Django to manage student records easily and efficiently.
 
 ## Technologies Used
 - Python
@@ -34,17 +33,19 @@ SQLite
 
 1. Activate the virtual environment.
 2. Open the project directory.
-3. Run database migrations:
+3. Run migrations:
 
-   `python manage.py migrate`
+   ```bash
+   python manage.py migrate
+   ```
 
-4. Start the development server:
+4. Start the server:
 
-   `python manage.py runserver`
+   ```bash
+   python manage.py runserver
+   ```
 
-5. Open the browser and visit:
-
-   `http://127.0.0.1:8000/`
+5. Open http://127.0.0.1:8000/ in your browser.
 
 ## Project Status
 Core features and functional testing completed.
